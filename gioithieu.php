@@ -61,7 +61,9 @@ $listnoibat = $xl_tintuc->DSnoibat(4);
 						<a href="<?php echo DOMAIN.$listnoibat[2]->duongdan_cha.'/'.$listnoibat[2]->duongdan.'-'.$listnoibat[2]->ma ?>"><img src="<?=$listnoibat[2]->hinh?>"/></a>
 					</div>
 					<div class="rightpro pro">
+						
 						<a href="<?php echo DOMAIN.$listnoibat[3]->duongdan_cha.'/'.$listnoibat[3]->duongdan.'-'.$listnoibat[3]->ma ?>"><img src="<?=$listnoibat[3]->hinh?>"/></a>
+                                                <a href="<?php echo DOMAIN.$listnoibat[4]->duongdan_cha.'/'.$listnoibat[4]->duongdan.'-'.$listnoibat[4]->ma ?>"><img src="<?=$listnoibat[4]->hinh?>"/></a>
 					</div></div>
 				</div>
 			</div>				
