@@ -6,37 +6,20 @@ $listnoibat = $xl_tintuc->DSnoibat(4);
 <html>
 	<head>		
 		<title><?php echo @$tieude ?></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="<?php echo @$motatukhoa ?>" />
 		<meta name="keywords" content="<?php echo @$tukhoa ?>" />
 		<?php 
-			
 			include 'includes/cssjs.php';
 		?>
-		<script>$(function(){
-					$('.khac').owlCarousel({
-						loop:true,
-						margin:20,
-						nav:true,
-						responsive:{
-							0:{
-								items:1
-							},
-							600:{
-								items:2
-							},
-							1000:{
-								items:4
-							}
-						}
-					})
-					});
-				</script>
 	<head>
 	<body>
 		<!-- header menu-->
-		<?php include 'includes/header.php' ?>
+		<header>
+			<?php include 'includes/header.php' ?>
+		</header>
 		<!-- content -->
-		<div class="row content">
+		<div class="content">
 				<!-- Sản pham noi bat -->
 				<div class="box">
 					<div class="box-title">
@@ -84,7 +67,42 @@ $listnoibat = $xl_tintuc->DSnoibat(4);
 					</div>				
 				
 			</div>
-		</div>		
+		</div>
+		
+		<footer>
 			<?php include 'includes/footer.php' ?>
+		</footer>
 	</body>
 </html>
+
+<script>
+$(function(){
+	$('.khac').owlCarousel({
+		loop:true,
+		items:4,
+		margin:20,
+		nav:true,
+		autoplay: true,
+		autoplayTimeout:1000,
+		autoplayHoverPause: true,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:2
+			},
+			1000:{
+				items:4
+			}
+		}
+	});
+
+	<!-- SmartMenus jQuery init -->
+	$('#main-menu').smartmenus({
+		subMenusSubOffsetX: 6,
+		subMenusSubOffsetY: -8
+	});
+});
+
+</script>

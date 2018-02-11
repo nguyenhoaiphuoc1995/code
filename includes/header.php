@@ -1,5 +1,5 @@
 <!-- header top-->
-<div class="row header-top">
+<div class="col-md-12 header-top">
 	<div class="container">
 	<a href="<?=DOMAIN?>" class="logotop"><img src="<?php echo $xl_param->DocTheoTen('logo')->giatri ?>"/></a>
 	<ul class="menutop">
@@ -14,7 +14,7 @@
 	</div>
 </div>
 <!-- header menu-->
-<div class="row  header-menu">
+<div class="header-menu">
 	<!-- banner -->
 	<div class="banner">
 		<img src="<?php echo $xl_param->DocTheoTen('banner')->giatri ?>"/>

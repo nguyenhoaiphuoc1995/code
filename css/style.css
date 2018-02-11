@@ -1,6 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700&subset=vietnamese);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Roboto:300,400,700&subset=latin-ext,vietnamese);
-
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;	
+}
 body{
 	font-family: Roboto,Helvetica Neue,Arial,sans-serif;
 	margin:0;
@@ -20,13 +27,10 @@ a{
 	margin:0;
 	padding:0
 }
-.row{
-	width:100%;
-}
-.container{
+/* .container{
 	margin:auto;    position: relative;
 	width:1024px;
-}
+} */
 .banner img{
 	width:100%;
 }
@@ -64,9 +68,7 @@ a{
     overflow: hidden;
     width: 100%;
 }
-.nav{
 
-}
 .nav > li{
 	float:left;
 	padding:25px 40px;
@@ -102,17 +104,12 @@ a{
 	position:relative;
 	padding-bottom:15px;
 }
-.submenu >li:last-child{
 
-}
-.submenu >li.active{
-	
-}
 .submenu >li:hover:before{
 	content: "";
 	height: 1px;
 	width: 30%;
-	background: #ff7600;
+	background: #afafaf;
 	position: absolute;
 	bottom: 10px;
 }
@@ -424,4 +421,19 @@ a{
 .category{
 	padding-left:40px;
 	padding-bottom:40px;
+}
+
+/*Menu*/
+@media (min-width: 768px) {
+	#main-nav {
+		line-height: 0;
+		text-align: center;
+	}
+	#main-menu {
+		display: inline-block;
+	}
+}
+
+.sm-mint {
+	border-bottom: none;
 }

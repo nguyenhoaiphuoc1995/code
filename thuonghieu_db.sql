@@ -16,6 +16,8 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
+CREATE DATABASE IF NOT EXISTS `thuonghieu_db`;
+USE `thuonghieu_db`;
 --
 -- Database: `thuonghieu_db`
 --
@@ -33,8 +35,8 @@ CREATE TABLE IF NOT EXISTS `nhom` (
   `mota` text COLLATE utf8_unicode_ci,
   `hinhdaidien` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `danhmuccha` int(11) DEFAULT '0',
-  `ngaytao` datetime DEFAULT NULL,
-  `ngaycapnhat` datetime DEFAULT NULL,
+  `ngaytao` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `ngaycapnhat` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `kichhoat` int(1) DEFAULT '0',
   `h1` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `tukhoa` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -67,8 +69,8 @@ CREATE TABLE IF NOT EXISTS `parameter` (
   `ma` int(11) NOT NULL AUTO_INCREMENT,
   `ten` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `giatri` text COLLATE utf8_unicode_ci,
-  `ngaytao` datetime DEFAULT NULL,
-  `ngaycapnhat` datetime DEFAULT NULL,
+  `ngaytao` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `ngaycapnhat` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`ma`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=48 ;
 
@@ -117,8 +119,8 @@ CREATE TABLE IF NOT EXISTS `quantri` (
   `matkhau` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `dienthoai` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `ngaytao` datetime DEFAULT NULL,
-  `ngaycapnhat` datetime DEFAULT NULL,
+  `ngaytao` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `ngaycapnhat` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `kichhoat` int(11) DEFAULT NULL,
   `quyen` int(11) DEFAULT NULL,
   PRIMARY KEY (`ma`)
@@ -149,8 +151,8 @@ CREATE TABLE IF NOT EXISTS `sanpham` (
   `motatukhoa` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `tieude` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `kichhoat` int(11) NOT NULL DEFAULT '0',
-  `ngaytao` datetime NOT NULL,
-  `ngaycapnhat` datetime DEFAULT NULL,
+  `ngaytao` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `ngaycapnhat` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `hinh` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `hinhs` text COLLATE utf8_unicode_ci NOT NULL,
   `noibat` int(11) NOT NULL DEFAULT '0',

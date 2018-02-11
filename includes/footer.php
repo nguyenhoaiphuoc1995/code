@@ -1,5 +1,5 @@
 <!-- footer -->
-<div class="row footer">
+<div class="footer">
 <div class="container">
 	<div><a href="<?=DOMAIN?>"><img src="<?php echo $xl_param->DocTheoTen('logo2')->giatri ?>"/></a></div>
 	<div style="padding:30px 0 50px">
