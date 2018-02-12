@@ -8,6 +8,10 @@
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;	
 }
+img {
+	max-width: 100%;
+	background-size: cover;
+}
 body{
 	font-family: Roboto,Helvetica Neue,Arial,sans-serif;
 	margin:0;

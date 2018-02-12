@@ -12,7 +12,8 @@ gulp.task('js', function(){
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.min.js',
          './owlcarousel/owl.carousel.min.js',
-         './node_modules/smartmenus/dist/jquery.smartmenus.min.js'
+         './node_modules/smartmenus/dist/jquery.smartmenus.min.js',
+         './js/*'
         ])
     .pipe(concat('bundle.js'))
     .pipe(uglify())
