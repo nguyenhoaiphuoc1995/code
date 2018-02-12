@@ -1,13 +1,33 @@
 <?php 
 ob_start();
 date_default_timezone_set('Asia/Ho_Chi_Minh');
-define('HOST','localhost');
-// define('USERNAME','thuonghieu_admin');
-// define('PASSWORD','hPH12.h0');
-define('USERNAME','root');
-define('PASSWORD','');
-define('DBNAME','thuonghieu_db');
-define('DOMAIN','http://chamsocthuonghieu.vn/');	
+
+if ($_SERVER['HTTP_HOST'] == 'localhost') {
+    define('ISPRODUCTION', false);
+} else {
+    define('ISPRODUCTION', true);
+}
+
+if (ISPRODUCTION === true) {
+    define('HOST','localhost');
+    define('USERNAME','thuonghieu_admin');
+    define('PASSWORD','hPH12.h0');
+    define('DBNAME','thuonghieu_db');
+    define('DOMAIN','http://chamsocthuonghieu.vn/');	
+
+} else {
+    define('HOST','localhost');
+    define('USERNAME','root');
+    define('PASSWORD','');
+    define('DBNAME','thuonghieu_db');
+    define('DOMAIN','http://localhost/');	
+}
+
+// define('HOST','localhost');
+// define('USERNAME','root');
+// define('PASSWORD','');
+// define('DBNAME','thuonghieu_db');
+// define('DOMAIN','http://chamsocthuonghieu.vn/');	
 session_start();
 require 'class/database.php';
 require_once('class/xl_param.php');
