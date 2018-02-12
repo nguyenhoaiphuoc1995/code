@@ -20,7 +20,7 @@ if (ISPRODUCTION === true) {
     define('USERNAME','root');
     define('PASSWORD','');
     define('DBNAME','thuonghieu_db');
-    define('DOMAIN','http://localhost/');	
+    define('DOMAIN','http://localhost/code/');	
 }
 
 // define('HOST','localhost');

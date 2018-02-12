@@ -28,16 +28,16 @@ $listnoibat = $xl_tintuc->DSnoibat(4);
 					<div class="box-content ">
 						<div class="container noibat">
 						<div class="leftpro pro">
-							<a href="<?php echo DOMAIN.$listnoibat[0]->duongdan_cha.'/'.$listnoibat[0]->duongdan.'-'.$listnoibat[0]->ma ?>"><img src="<?=$listnoibat[0]->hinh?>"/></a>
-							<a href="<?php echo DOMAIN.$listnoibat[0]->duongdan_cha.'/'.$listnoibat[0]->duongdan.'-'.$listnoibat[0]->ma ?>"><img src="<?=$listnoibat[0]->hinh?>"/></a>
+							<a href="<?php echo DOMAIN.$listnoibat[0]->duongdan_cha.'/'.$listnoibat[0]->duongdan.'-'.$listnoibat[0]->ma ?>"><img src="<?=DOMAIN.$listnoibat[0]->hinh?>"/></a>
+							<a href="<?php echo DOMAIN.$listnoibat[0]->duongdan_cha.'/'.$listnoibat[0]->duongdan.'-'.$listnoibat[0]->ma ?>"><img src="<?=DOMAIN.$listnoibat[0]->hinh?>"/></a>
 						</div>
 						<div class="midpro pro">
-							<a href="<?php echo DOMAIN.$listnoibat[1]->duongdan_cha.'/'.$listnoibat[1]->duongdan.'-'.$listnoibat[1]->ma ?>"><img src="<?=$listnoibat[1]->hinh?>"/></a>
-							<a href="<?php echo DOMAIN.$listnoibat[2]->duongdan_cha.'/'.$listnoibat[2]->duongdan.'-'.$listnoibat[2]->ma ?>"><img src="<?=$listnoibat[2]->hinh?>"/></a>
+							<a href="<?php echo DOMAIN.$listnoibat[1]->duongdan_cha.'/'.$listnoibat[1]->duongdan.'-'.$listnoibat[1]->ma ?>"><img src="<?=DOMAIN.$listnoibat[1]->hinh?>"/></a>
+							<a href="<?php echo DOMAIN.$listnoibat[2]->duongdan_cha.'/'.$listnoibat[2]->duongdan.'-'.$listnoibat[2]->ma ?>"><img src="<?=DOMAIN.$listnoibat[2]->hinh?>"/></a>
 						</div>
 						<div class="rightpro pro">
-							<a href="<?php echo DOMAIN.$listnoibat[3]->duongdan_cha.'/'.$listnoibat[3]->duongdan.'-'.$listnoibat[3]->ma ?>"><img src="<?=$listnoibat[3]->hinh?>"/></a>
-							<a href="<?php echo DOMAIN.$listnoibat[3]->duongdan_cha.'/'.$listnoibat[3]->duongdan.'-'.$listnoibat[3]->ma ?>"><img src="<?=$listnoibat[3]->hinh?>"/></a>
+							<a href="<?php echo DOMAIN.$listnoibat[3]->duongdan_cha.'/'.$listnoibat[3]->duongdan.'-'.$listnoibat[3]->ma ?>"><img src="<?=DOMAIN.$listnoibat[3]->hinh?>"/></a>
+							<a href="<?php echo DOMAIN.$listnoibat[3]->duongdan_cha.'/'.$listnoibat[3]->duongdan.'-'.$listnoibat[3]->ma ?>"><img src="<?=DOMAIN.$listnoibat[3]->hinh?>"/></a>
 						</div>
 						</div>
 					</div>			
