@@ -5,6 +5,7 @@ var minify = require('gulp-clean-css');
 var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
 var clean = require('gulp-clean');
+var browserSync = require('browser-sync').create();
 
 
 gulp.task('js', function(){
@@ -12,12 +13,15 @@ gulp.task('js', function(){
         './node_modules/jquery/dist/jquery.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.min.js',
          './owlcarousel/owl.carousel.min.js',
-         './node_modules/smartmenus/dist/jquery.smartmenus.min.js',
+         './smartmenus/dist/jquery.smartmenus.min.js',
          './js/*'
         ])
     .pipe(concat('bundle.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/js/'));
+    .pipe(gulp.dest('dist/js/'))
+    .pipe(browserSync.reload({
+        stream:true
+    }));
  });
 
  gulp.task('css', function(){
@@ -26,13 +30,16 @@ gulp.task('js', function(){
         './owlcarousel/assets/owl.theme.default.min.css',
         './owlcarousel/assets/owl.carousel.min.css',
         './font-awesome/css/font-awesome.min.css',
-        './node_modules/smartmenus/dist/css/sm-mint/sm-mint.css',
-        './node_modules/smartmenus/dist/css/sm-core-css.css',
-        './css/style.css'
+        './smartmenus/dist/css/sm-mint/sm-mint.css',
+        './smartmenus/dist/css/sm-core-css.css',
+        './css/*'
     ])
     .pipe(concat('style.css'))
     .pipe(minify())
-    .pipe(gulp.dest('dist/styles/'));
+    .pipe(gulp.dest('dist/styles/'))
+    .pipe(browserSync.reload({
+        stream: true
+    }));
  });
 
  // Fonts
@@ -57,7 +64,20 @@ gulp.task('clean', function () {
     return gulp.src(['dist/styles', 'dist/js', 'dist/images'], { read: false }).pipe(clean());
 });
 
-gulp.task('build', ['js','css', 'fonts', 'images']);
+
+gulp.task('browserSync', function() {
+    browserSync.init({
+        server: {
+           baseDir: 'dist'
+        },
+     })
+});
+
+
+
+gulp.task('build', ['browserSync', 'js','css', 'fonts', 'images'], function() {
+    gulp.watch(['./css/*', 'js/*'], ['css','js']);
+});
 
 gulp.task('default',['clean'],function(){
     gulp.start('build');

@@ -64,7 +64,7 @@ $listnoibat = $xl_tintuc->DSnoibat(4);
 						<h3 class="big-title"><span class="t-c">Sản phẩm khác</span><span class="title-line"></span></h3>
 					</div>
 					<div class="box-content">
-					<div class="">
+					<div class="col-md-12">
 						<div class="owl-carousel owl-theme khac container">					
 							
 							<?php 

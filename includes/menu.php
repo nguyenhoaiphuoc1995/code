@@ -2,7 +2,7 @@
 $listcat = $xl_nhomtin->DS();
 ?>
 <div class="menu">
-	<div class="container">
+	<div class="container-fluid">
 
 		<nav id="main-nav">
 			<ul id="main-menu" class="sm sm-mint">
@@ -16,7 +16,7 @@ $listcat = $xl_nhomtin->DS();
 						?>			
 					</ul>
 				</li>
-				<li><a href="<?=DOMAIN?>gioi-thieu">Giới thiệu</a></li>
+				<li class="big-title"><a href="<?=DOMAIN?>gioi-thieu">Giới thiệu</a></li>
 			</ul>
 		</nav>
 

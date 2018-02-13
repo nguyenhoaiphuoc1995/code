@@ -431,7 +431,7 @@ a{
 @media (min-width: 768px) {
 	#main-nav {
 		line-height: 0;
-		text-align: center;
+		text-align: left;
 	}
 	#main-menu {
 		display: inline-block;
