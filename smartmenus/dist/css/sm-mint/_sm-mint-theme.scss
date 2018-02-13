@@ -170,7 +170,6 @@ $sm-mint__toggle-spacing: floor($sm-mint__item-height * 0.1);
 		&:hover,
 		&:focus,
 		&:active {
-			background: url(../../images/split.png) no-repeat 95%;
 			text-decoration: underline;
 		}
 
@@ -232,7 +231,6 @@ $sm-mint__toggle-spacing: floor($sm-mint__item-height * 0.1);
 			&:hover,
 			&:focus,
 			&:active {
-				background: url(../../images/split.png) no-repeat 95%;
 				text-decoration: underline;
 				text-decoration-color: #ff7600;
 			}
@@ -297,7 +295,7 @@ $sm-mint__toggle-spacing: floor($sm-mint__item-height * 0.1);
 			&:active {
 				background: $sm-mint__desktop-item-hover-bg;
 				color: $sm-mint__desktop-item-hover-color;
-  				background: url(../../images/split.png) no-repeat 95%;
+				background: url(../../images/split.png) no-repeat 95%;
 
 			}
 

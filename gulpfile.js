@@ -5,6 +5,8 @@ var minify = require('gulp-clean-css');
 var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
 var clean = require('gulp-clean');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
 
 
@@ -24,7 +26,7 @@ gulp.task('js', function(){
     }));
  });
 
- gulp.task('css', function(){
+ gulp.task('css', ['sass'], function(){
     gulp.src([
         './node_modules/bootstrap/dist/css/bootstrap.min.css',
         './owlcarousel/assets/owl.theme.default.min.css',
@@ -59,14 +61,23 @@ gulp.task('images', function () {
         .pipe(gulp.dest('dist/images'));
 });
 
+//Compile Sass\Scss to Css
+gulp.task('sass', function() {
+    gulp.src('./smartmenus/dist/css/sm-mint/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./smartmenus/dist/css/sm-mint/'));
+});
+
 // Clean
 gulp.task('clean', function () {
-    return gulp.src(['dist/styles', 'dist/js', 'dist/images'], { read: false }).pipe(clean());
+    return gulp.src(['dist/styles', 'dist/js', 'dist/images','dist/fonts'], { read: false }).pipe(clean());
 });
 
 
 gulp.task('browserSync', function() {
     browserSync.init({
+        ui: false,
+        open: false,
         server: {
            baseDir: 'dist'
         },
@@ -77,6 +88,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('build', ['browserSync', 'js','css', 'fonts', 'images'], function() {
     gulp.watch(['./css/*', 'js/*'], ['css','js']);
+    gulp.watch('./smartmenus/dist/css/sm-mint/**/*.scss', ['css']);
 });
 
 gulp.task('default',['clean'],function(){

@@ -16,7 +16,7 @@ $listcat = $xl_nhomtin->DS();
 						?>			
 					</ul>
 				</li>
-				<li class="big-title"><a href="<?=DOMAIN?>gioi-thieu">Giới thiệu</a></li>
+				<li><a href="<?=DOMAIN?>gioi-thieu">Giới thiệu</a></li>
 			</ul>
 		</nav>
 
