@@ -1,7 +1,7 @@
 <!-- footer -->
 <div class="footer">
 <div class="container">
-	<div><a href="<?=DOMAIN?>"><img src="<?php echo $xl_param->DocTheoTen('logo2')->giatri ?>"/></a></div>
+	<div><a href="<?=DOMAIN?>"><img src="<?php echo DOMAIN.$xl_param->DocTheoTen('logo2')->giatri ?>"/></a></div>
 	<div style="padding:30px 0 50px">
 		<ul class="ftinfo">
 			<li><i class="fa fa-phone"></i> <?php echo $xl_param->DocTheoTen('dienthoai')->giatri ?></li>

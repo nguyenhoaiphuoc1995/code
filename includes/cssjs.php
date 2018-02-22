@@ -5,7 +5,6 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 <link href="./dist/styles/style.css" rel="stylesheet">
-
 <script src="./dist/js/bundle.js"></script>
 
 <?php echo $xl_param->DocTheoTen('scriptgoogle')->giatri ?>

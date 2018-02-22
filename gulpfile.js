@@ -13,7 +13,9 @@ var browserSync = require('browser-sync').create();
 gulp.task('js', function(){
     gulp.src([
         './node_modules/jquery/dist/jquery.min.js',
+        './node_modules/bootstrap/dist/js/popper.min.js',
         './node_modules/bootstrap/dist/js/bootstrap.min.js',
+        './node_modules/bootstrap/dist/js/mdb.min.js',
          './owlcarousel/owl.carousel.min.js',
          './smartmenus/dist/jquery.smartmenus.min.js',
          './js/*'
@@ -28,10 +30,11 @@ gulp.task('js', function(){
 
  gulp.task('css', ['sass'], function(){
     gulp.src([
+        './font-awesome/css/font-awesome.css',
         './node_modules/bootstrap/dist/css/bootstrap.min.css',
+        './node_modules/mdbootstrap/css/mdb.min.css',
         './owlcarousel/assets/owl.theme.default.min.css',
         './owlcarousel/assets/owl.carousel.min.css',
-        './font-awesome/css/font-awesome.min.css',
         './smartmenus/dist/css/sm-mint/sm-mint.css',
         './smartmenus/dist/css/sm-core-css.css',
         './css/*'
@@ -47,8 +50,10 @@ gulp.task('js', function(){
  // Fonts
 gulp.task('fonts', function() {
     return gulp.src([
-                    './font-awesome/fonts/*'])
-            .pipe(gulp.dest('dist/fonts/'));
+                    './font-awesome/fonts/*',
+                    './node_modules/mdbootstrap/font/**/*'
+                ])
+            .pipe(gulp.dest('dist/font/'));
 });
 
 // Images
@@ -70,7 +75,7 @@ gulp.task('sass', function() {
 
 // Clean
 gulp.task('clean', function () {
-    return gulp.src(['dist/styles', 'dist/js', 'dist/images','dist/fonts'], { read: false }).pipe(clean());
+    return gulp.src(['dist/styles', 'dist/js', 'dist/images','dist/font'], { read: false }).pipe(clean());
 });
 
 
