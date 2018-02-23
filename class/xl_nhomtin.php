@@ -30,7 +30,7 @@ class xl_nhomtin extends database
 		return $this->loadRow();
 	}
 	function searchSanPham($query) {
-		$sql = "select sanpham.*, nhom.duongdan as duongdan_cha from sanpham join nhom on sanpham.manhomtin=nhom.ma where (sanpham.ten like '%$query%')";
+		$sql = "select sanpham.*, nhom.duongdan as duongdan_cha from sanpham join nhom on sanpham.manhomtin=nhom.ma where (sanpham.ten like '%$query%' or sanpham.tieude like '%$query%' or sanpham.tukhoa like '%$query%')";
 		$this->setQuery($sql);
 		return $this->loadAllRow();
 	}
