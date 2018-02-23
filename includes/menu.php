@@ -28,17 +28,16 @@ $listcat = $xl_nhomtin->DS();
 					</ul>
 				</div>
 				<!-- Search form -->
-				<form class="form-inline md-form form-sm pull-right">
+				<div class="form-inline md-form form-sm pull-right">
 						<div class="md-form mt-0">
-							<input class="form-control form-control-sm ml-3 w-70" type="text" placeholder="Nhập Thông Tin Cần Tìm" aria-label="Search">
+							<input id="input-search" class="form-control form-control-sm ml-3 w-70" type="text" placeholder="Nhập Thông Tin Cần Tìm" aria-label="Search">
 							<span class="input-group-btn w-30">
-								<button class="btn btn-sm" type="submit" style="background-color: rgba(0,0,0,0)">
+								<button id="btn-search" class="btn btn-sm" type="submit" style="background-color: rgba(0,0,0,0)">
 									<i class="fa fa-search" aria-hidden="true"></i>
 								</button>
 							</span>
-						</div>
-						
-					</form>
+						</div>		
+				</div>
 				
 			</nav>
 		</div>
@@ -58,3 +57,27 @@ $listcat = $xl_nhomtin->DS();
 		<div class="clear"></div>
 	</div>
 </div>
+
+<script>
+	$('#btn-search').click(function(event) {
+		console.log($('#input-search')[0].value);
+		$.post('./ajaxSeachSanPham.php', {
+			query: $('#input-search')[0].value
+		}, function(data) {
+			var res = JSON.parse(data);
+			var htmlString = '<div class="box row">';
+			for(var i = 0; i < res.length; i++) {
+				htmlString += '<div class="col-md-4">' +
+								'<div class="col-md-12 img" style="margin: 5px 5px 0px 0;border:1px solid black">' +
+									'<a href="<?=DOMAIN?>'+ res[i].duongdan_cha + '/' + res[i].duongdan + '-' + res[i].ma + '"><img class="img-responsive" src="<?=DOMAIN?>'+ res[i].hinh +'"/></a>' +
+								'</div>' +
+								'<div class="col-md-12 text-center pro-span"><a href="<?=DOMAIN?>'+ res[i].duongdan_cha + '/' + res[i].duongdan + '-' + res[i].ma + '"><span>'+ res[i].tieude +'</span></a></div>' +
+							'</div>'
+			}
+			htmlString += '</div>'
+			$('#container').html(htmlString);
+		});
+
+		event.preventDefault();
+	});
+</script>

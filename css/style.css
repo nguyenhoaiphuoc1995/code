@@ -8,9 +8,17 @@
 	-ms-box-sizing: border-box;
 	box-sizing: border-box;	
 }
-img {
-	max-width: 100%;
+.img > a > img {
+	height: 200px;
+	width: 100%;
 	background-size: cover;
+	resize: both;
+}
+.img {
+	margin-top: 10px;
+	border:solid black 1px;
+	padding-left: 0;
+	padding-right: 0;
 }
 body{
 	font-family: Roboto,Helvetica Neue,Arial,sans-serif;
@@ -146,6 +154,18 @@ a{
   font-weight:normal;
   padding-top:10px;
 }
+.pro-span {
+	background-color: #37ad4d;
+	margin-bottom: 10px
+}
+
+.pro-span > a > span {
+    display: block;
+    padding: 10px 5px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
 .btntim{
 	    background: #fff;
     border: 1px solid;
@@ -206,7 +226,7 @@ a{
 .pro{
 	float:left;
 	width:262px;
-	margin-right:50px;
+	margin-right:0px;
 }
 .pro >a>img{
 	border:1px solid #ffffff;

@@ -84,11 +84,13 @@ if($tin){
 				</script>
 	<head>
 	<body>
-		<!-- header menu-->
-		<?php include 'includes/header.php' ?>
+		<header>
+			<!-- header menu-->
+			<?php include 'includes/header.php' ?>
+		</header>
+
 		<!-- content -->
-		<div class="row content">
-			<div class="container">
+		<div class="container">
 				<!-- breacrum-->
 				<div class="breakcrum">
 					<ul>
@@ -147,12 +149,13 @@ if($tin){
 								<div style="padding:30px 0"><a class="btnlienhe" href="<?=DOMAIN.'lien-he'?>">Liên hệ</a></div>
 							</div>
 						</div>
-					</div>
-				</div>
-					
+					</div>					
 			</div>
-		</div>					
-		<?php include 'includes/footer.php' ?>
+		</div>
+		
+		<footer>
+			<?php include 'includes/footer.php' ?>
+		</footer>
 	</body>
 </html>
 <?php }else{

@@ -19,16 +19,16 @@ $listnoibat = $xl_tintuc->DSnoibat(4);
 			<?php include 'includes/header.php' ?>
 		</header>
 		<!-- content -->
-		<div class="container">
+		<div id="container" class="container">
 				<!-- Sản pham noi bat -->
 				<div class="box">
 					<div class="box-title">
 						<h3 class="big-title"><span class="t-c">Sản phẩm nổi bật</span><span class="title-line"></span></h3>
 					</div>
-					<div class="box-content ">
-						<div class="noibat">
-						<div class="leftpro pro">
-							<div>
+					<div class="col-md-12 box-content row" style="margin-left: 3%">
+						<div class="col-md-12 row">
+						<div class="col-md-4 col-sm-12 leftpro pro">
+							<div class="col-md-12 img text-right">
 								<a href="<?php echo DOMAIN.$listnoibat[0]->duongdan_cha.'/'.$listnoibat[0]->duongdan.'-'.$listnoibat[0]->ma ?>">
 									<img src="<?=DOMAIN.$listnoibat[0]->hinh?>"
 										class="img-responsive"
@@ -36,23 +36,27 @@ $listnoibat = $xl_tintuc->DSnoibat(4);
 								</a>
 							</div>
 
-							<div>
-								<a href="<?php echo DOMAIN.$listnoibat[0]->duongdan_cha.'/'.$listnoibat[0]->duongdan.'-'.$listnoibat[0]->ma ?>"><img src="<?=DOMAIN.$listnoibat[0]->hinh?>"/></a>
+							<div class="col-md-12 img text-right">
+								<a href="<?php echo DOMAIN.$listnoibat[0]->duongdan_cha.'/'.$listnoibat[0]->duongdan.'-'.$listnoibat[0]->ma ?>"><img class="img-responsive" src="<?=DOMAIN.$listnoibat[0]->hinh?>"/></a>
 							</div>
 						</div>
-						<div class="midpro pro">
-							<a href="<?php echo DOMAIN.$listnoibat[1]->duongdan_cha.'/'.$listnoibat[1]->duongdan.'-'.$listnoibat[1]->ma ?>"><img src="<?=DOMAIN.$listnoibat[1]->hinh?>"/></a>
-							<a href="<?php echo DOMAIN.$listnoibat[2]->duongdan_cha.'/'.$listnoibat[2]->duongdan.'-'.$listnoibat[2]->ma ?>"><img src="<?=DOMAIN.$listnoibat[2]->hinh?>"/></a>
+						<div class="col-md-4 col-sm-12 pro">
+							<div class="col-md-12 img text-center">
+								<a href="<?php echo DOMAIN.$listnoibat[1]->duongdan_cha.'/'.$listnoibat[1]->duongdan.'-'.$listnoibat[1]->ma ?>"><img class="img-responsive" src="<?=DOMAIN.$listnoibat[1]->hinh?>"/></a>
+							</div>
+							<div class="col-md-12 img text-center">
+								<a href="<?php echo DOMAIN.$listnoibat[2]->duongdan_cha.'/'.$listnoibat[2]->duongdan.'-'.$listnoibat[2]->ma ?>"><img class="img-responsive" src="<?=DOMAIN.$listnoibat[2]->hinh?>"/></a>
+							</div>
 						</div>
-						<div class="rightpro pro">
-							<div>
+						<div class="col-md-4 col-sm-12 rightpro pro">
+							<div class="col-md-12 img text-left">
 								<a href="<?php echo DOMAIN.$listnoibat[3]->duongdan_cha.'/'.$listnoibat[3]->duongdan.'-'.$listnoibat[3]->ma ?>">
-									<img src="<?=DOMAIN.$listnoibat[3]->hinh?>" class=''
+									<img src="<?=DOMAIN.$listnoibat[3]->hinh?>" class="img-responsive"
 									/>
 								</a>
 							</div>
-							<div>
-								<a href="<?php echo DOMAIN.$listnoibat[3]->duongdan_cha.'/'.$listnoibat[3]->duongdan.'-'.$listnoibat[3]->ma ?>"><img src="<?=DOMAIN.$listnoibat[3]->hinh?>"/></a>
+							<div class="col-md-12 img text-left">
+								<a href="<?php echo DOMAIN.$listnoibat[3]->duongdan_cha.'/'.$listnoibat[3]->duongdan.'-'.$listnoibat[3]->ma ?>"><img class="img-responsive" src="<?=DOMAIN.$listnoibat[3]->hinh?>"/></a>
 							</div>
 						</div>
 						</div>

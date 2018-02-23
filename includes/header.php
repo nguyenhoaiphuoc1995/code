@@ -3,7 +3,7 @@
 	<div class="container">
 	<a href="<?=DOMAIN?>" class="logotop"><img src="<?php echo DOMAIN.$xl_param->DocTheoTen('logo')->giatri ?>"/></a>
 	<ul class="menutop">
-		<li><a href="<?=DOMAIN?>lien-he">Liên hệ</a></li>
+		<!-- <li><a href="<?=DOMAIN?>lien-he">Liên hệ</a></li> -->
 	</ul>
 	</div>
 </div>
